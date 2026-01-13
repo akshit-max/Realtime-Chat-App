@@ -11,19 +11,19 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.4.1",
+    "autoprefixer": "^10.4.23",
     "axios": "^1.13.2",
     "chat-app": "file:..",
     "lucide-react": "^0.562.0",
+    "postcss": "^8.5.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-hot-toast": "^2.6.0",
     "react-router": "^7.12.0",
     "socket.io-client": "^4.8.1",
-    "vite": "^6.4.1",
-    "zustand": "^5.0.3",
-    "postcss": "^8.5.6",
     "tailwindcss": "^3.4.19",
-    "autoprefixer": "^10.4.23"
+    "vite": "^6.4.1",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
@@ -34,6 +34,5 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0"
-    
   }
 }
