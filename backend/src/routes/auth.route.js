@@ -1,21 +1,24 @@
 import express from "express";
-// import { signup, login, logout, updateProfile } from "../controllers/auth.controller.js";
-// import { protectRoute } from "../middleware/auth.middleware.js";
-// import { arcjetProtection } from "../middleware/arcjet.middleware.js";
+import { signup, login, logout, updateProfile } from "../controllers/auth.controller.js";
+import { protectRoute } from "../middleware/auth.middleware.js";
+
+import { arcjetProtection } from "../middleware/arcjet.middleware.js";
 
 const router = express.Router();
 
-// router.use(arcjetProtection);
-router.post("/signup", (req, res) => {
-  res.send("hello");
-});
+// router.use(arcjetProtection);// every function signup,login,logout,update profile now using this arcjet common to all
 
-// router.post("/signup", signup);
-// router.post("/login", login);
-// router.post("/logout", logout);
+// router.get("/test", arcjetProtection,(req,res)=>{
+//     res.status(200).send({message:"hi"})
+// });
+router.post("/signup", signup);
+router.post("/login", login);
+router.post("/logout", logout);
 
-// router.put("/update-profile", protectRoute, updateProfile);
+router.put("/update-profile", protectRoute, updateProfile);
 
-// router.get("/check", protectRoute, (req, res) => res.status(200).json(req.user));
+
+// Access the page 
+router.get("/check", protectRoute, (req, res) => res.status(200).json(req.user));
 
 export default router;
